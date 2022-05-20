@@ -1,15 +1,15 @@
-def prime(m):
-    if m==1:
+def prime(a):
+    if a==1:
         return False
-    for i in range(2,int(m**0.5)+1):
-        if m%i==0:
+    for i in range(2,int(a**0.5)+1):
+        if a%i==0:
             return False
-    return True    
-m=int(input())
-n=int(input())
+    return True
+a = int(input())
+b = int(input())
 p=0
-while m<=n:
-    if prime(m):
+while a<=b:
+    if prime(a):
         p+=1
-    m+=1
+    a+=1
 print(p)
