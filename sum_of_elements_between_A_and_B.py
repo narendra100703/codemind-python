@@ -5,4 +5,4 @@ sum=0
 for i in arr:
     if i in range(a,b+1):
         sum+=i
-print(sum)        
+print(sum)
