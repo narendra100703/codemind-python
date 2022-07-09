@@ -1,0 +1,5 @@
+s=input()
+s=s.split(' ')
+n=len(s)
+print(min(s[0]),end=' ')
+print(max(s[n-1]))
