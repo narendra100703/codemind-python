@@ -1,21 +1,20 @@
-a = input()
-b = input()
-a,b = a.replace(" ",""),b.replace(" ","")
-a,b = a.lower(),b.lower()
-a,b = set(a),set(b)
-a,b = list(a),list(b)
-c = []
-for i in range(0,len(a)):
-    if a[i] not in b:
-        c.append(a[i])
-for i in range(0,len(b)):
-    if b[i] not in a and b[i] not in c:
-        c.append(b[i])
-c.sort()
-c = str(c)
-c = c.replace(",","")
-c = c.replace("'","")
-c = c.replace("[","")
-c = c.replace("]","")
-c = c.replace(" ","")
-print(c)
+a=input()
+b=input()
+a=a.lower()
+b=b.lower()
+a=set(a)
+b=set(b)
+s=""
+c=0
+for i in a:
+    if i!=' ':
+        if i not in b:
+                s=s+i
+for i in b:
+    if i!=' ':
+        if i not in a:
+                s=s+i
+s=sorted(s)
+for i in s:
+    if i!=" ":
+        print(i,end="")
