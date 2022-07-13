@@ -1,10 +1,8 @@
-n=int(input())
-arr=list(map(int,input().split()))
+n = int(input())
+arr = list(map(int,input().split()))
 a=int(input())
 sum=0
-for i in range(0,a):
-    r=arr[i]%10
-    sum+=r
-    arr[i]=arr[i]//10
-print(sum)    
-    
+for i in arr:
+    if i in range(0,a+1):
+        sum+=i
+print(sum)        
