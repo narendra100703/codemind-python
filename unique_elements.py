@@ -1,7 +1,4 @@
-n = int(input())
-arr = list(map(int,input().split()))
-a = []
-for i in range(n):
-    if arr[i] not in a:
-        a.append(arr[i])
-print(*a)
+n=int(input())
+a=list(map(int,input().split()))
+for i in sorted(set(a),key=a.index):
+    print(i,end=' ')
