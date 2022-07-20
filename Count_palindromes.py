@@ -1,18 +1,15 @@
-def pali(i):
-    rev=0
-    temp=i
-    while temp>0:
-        r=temp%10
-        rev=rev*10+r
-        temp=temp//10
-    if i==rev:
+def pal(n):
+    t=n
+    s=str(n)
+    s=s[::-1]
+    s=int(s)
+    if(s==n):
         return True
+    return False
 n=int(input())
-arr=list(map(int,input().split()))
 c=0
-for i in arr:
-    if(pali(i)):
+k=list(map(int,input().split()))
+for i in range(n):
+    if(pal(k[i])==True):
         c+=1
-print(c)        
-
-        
+print(c)
